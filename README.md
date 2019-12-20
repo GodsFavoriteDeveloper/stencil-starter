@@ -29,7 +29,7 @@ Below there are detailed instructions on how to start using this repository for 
 #### Clone and Setup
 
 ```sh
-git clone <repo>
+git clone git@github.com:davvelsan/stencil-tailwind-starter.git
 pnpm install
 ```
 
@@ -46,7 +46,7 @@ pnpm run test:watch # run tests and watch for changes
 
 ### Create from scratch
 
-This repository was created following the excellent [Stencil example](https://github.com/jagreehal/setup-examples/tree/master/examples/stencil) provided by [Jag Reehal](https://github.com/jagreehal). His instructions were adapted to a new Stencil app generated using npm.
+This repository was created following the excellent [Stencil example](https://github.com/jagreehal/setup-examples/tree/master/examples/stencil) provided by [Jag Reehal](https://github.com/jagreehal). His instructions were adapted to a new Stencil app generated using [pnpm](https://pnpm.js.org/).
 
 #### Stencil + TailwindCSS
 
@@ -165,7 +165,7 @@ Using pnpm, it is possible that `eslint-plugin-react` is detected as a missing d
 pnpm add -D eslint-plugin-react
 ```
 
-If using the [ESLint extension for Visual Studio Code](https://github.com/microsoft/vscode-eslint), the parser might complain about `stencil.config.ts` not being included in your project files. This happens because `tsconfig.json` has been set as a project file in `.eslintrc.json`, and the stencil config file is not included in that project.
+If using the [ESLint extension for Visual Studio Code](https://github.com/microsoft/vscode-eslint), the typescript parser might complain about `stencil.config.ts` not being included in your project files. This happens because `tsconfig.json` has been set as a project file in `.eslintrc.json`, and the stencil config file is not included in that project.
 
 For more information, see the following issues:
 
@@ -173,7 +173,7 @@ https://github.com/typescript-eslint/typescript-eslint/issues/967
 
 https://github.com/typescript-eslint/typescript-eslint/issues/890
 
-There are several ways to fix this issue. The one employed in this repo is to simple add any root `*.ts` files to `tsconfig.json`.
+There are several ways to fix this issue. The one employed in this repo is to add any root `*.ts` files to `tsconfig.json`.
 
 ```json
 {
