@@ -170,6 +170,7 @@ If using the [ESLint extension for Visual Studio Code](https://github.com/micros
 For more information, see the following issues:
 
 https://github.com/typescript-eslint/typescript-eslint/issues/967
+
 https://github.com/typescript-eslint/typescript-eslint/issues/890
 
 There are several ways to fix this issue. The one employed in this repo is to simple add any root `*.ts` files to `tsconfig.json`.
