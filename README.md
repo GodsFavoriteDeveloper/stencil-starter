@@ -154,3 +154,55 @@ Create an `.eslintrc.json` file at the project root.
   ]
 }
 ```
+
+## Troubleshooting
+
+### ESLint
+
+Using pnpm, it is possible that `eslint-plugin-react` is detected as a missing dependency. To fix this, install the plugin.
+
+```sh
+pnpm add -D eslint-plugin-react
+```
+
+If using the [ESLint extension for Visual Studio Code](https://github.com/microsoft/vscode-eslint), the parser might complain about `stencil.config.ts` not being included in your project files. This happens because `tsconfig.json` has been set as a project file in `.eslintrc.json`, and the stencil config file is not included in that project.
+
+For more information, see the following issues:
+
+https://github.com/typescript-eslint/typescript-eslint/issues/967
+https://github.com/typescript-eslint/typescript-eslint/issues/890
+
+There are several ways to fix this issue. The one employed in this repo is to simple add any root `*.ts` files to `tsconfig.json`.
+
+```json
+{
+  "include": [
+    "./*.ts"
+  ],
+}
+```
+
+Then, depending on your `eslintrc.json` config, you might need to move the the `purgecss` parser function to within `postcss` options, to avoid collisions with the `@stencil/ban-side-effects` rule.
+
+```js
+export const config: Config = {
+  plugins: [
+    postcss({
+      plugins: [
+        tailwindcss('./tailwind.config.js'),
+        autoprefixer(),
+        ...(process.env.NODE_ENV === 'production'
+          ? [
+            purgecss({
+              content: ['./src/**/*.tsx', './src/index.html'],
+              defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+            }),
+            cssnano()
+          ]
+          : []
+        )
+      ]
+    })
+  ]
+};
+```
