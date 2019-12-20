@@ -1,12 +1,12 @@
 import { Config }   from '@stencil/core';
-import { postcss }  from "@stencil/postcss";
-import autoprefixer from "autoprefixer";
-import tailwindcss  from "tailwindcss";
-import purgecss     from "@fullhuman/postcss-purgecss";
-import cssnano      from "cssnano";
+import { postcss }  from '@stencil/postcss';
+import autoprefixer from 'autoprefixer';
+import tailwindcss  from 'tailwindcss';
+import purgecss     from '@fullhuman/postcss-purgecss';
+import cssnano      from 'cssnano';
 
 const purge = purgecss({
-  content: ["./src/**/*.tsx", "./src/index.html"],
+  content: ['./src/**/*.tsx', './src/index.html'],
   defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
 });
 
