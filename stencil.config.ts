@@ -5,11 +5,6 @@ import tailwindcss  from 'tailwindcss';
 import purgecss     from '@fullhuman/postcss-purgecss';
 import cssnano      from 'cssnano';
 
-const purge = purgecss({
-  content: ['./src/**/*.tsx', './src/index.html'],
-  defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
-});
-
 // https://stenciljs.com/docs/config
 
 export const config: Config = {
@@ -28,7 +23,15 @@ export const config: Config = {
       plugins: [
         tailwindcss('./tailwind.config.js'),
         autoprefixer(),
-        ...(process.env.NODE_ENV === 'production' ? [ purge, cssnano() ] : [])
+        ...(process.env.NODE_ENV === 'production'
+          ? [
+            purgecss({
+              content: ['./src/**/*.tsx', './src/index.html'],
+              defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+            }),
+            cssnano()
+          ]
+          : [])
       ]
     })
   ]
