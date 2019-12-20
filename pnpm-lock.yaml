@@ -3,7 +3,7 @@ dependencies:
   '@stencil/router': 1.0.1
 devDependencies:
   '@fullhuman/postcss-purgecss': 1.3.0
-  '@stencil/eslint-plugin': 0.2.1_6f61c671fed921fa95f7e42ee2b5356c
+  '@stencil/eslint-plugin': 0.2.1_d6a13b25a708119b8d0a821596700a48
   '@stencil/postcss': 1.0.1_@stencil+core@1.8.2
   '@types/autoprefixer': 9.6.1
   '@types/cssnano': 4.0.0
@@ -14,6 +14,7 @@ devDependencies:
   cross-env: 6.0.3
   cssnano: 4.1.10
   eslint: 6.7.2
+  eslint-plugin-react: 7.17.0_eslint@6.7.2
   jest: 24.9.0
   jest-cli: 24.9.0
   tailwindcss: 1.1.4
@@ -325,10 +326,11 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-HWzJRvHUa0nhzniPCrZ0zBi1YrJ/THPgmD6+8Ue4WYFr2zrEfQsAQkjBHamrKd4fPl2rdW10ga1ZfGDhZqJ1Vg==
-  /@stencil/eslint-plugin/0.2.1_6f61c671fed921fa95f7e42ee2b5356c:
+  /@stencil/eslint-plugin/0.2.1_d6a13b25a708119b8d0a821596700a48:
     dependencies:
       '@typescript-eslint/parser': 2.12.0_eslint@6.7.2
       eslint: 6.7.2
+      eslint-plugin-react: 7.17.0_eslint@6.7.2
       eslint-utils: 1.4.3
       tsutils: 3.17.1
     dev: true
@@ -644,6 +646,15 @@ packages:
     dev: true
     resolution:
       integrity: sha1-jCpe8kcv2ep0KwTHenUJO6J1fJM=
+  /array-includes/3.1.0:
+    dependencies:
+      define-properties: 1.1.3
+      es-abstract: 1.17.0-next.1
+    dev: true
+    engines:
+      node: '>= 0.4'
+    resolution:
+      integrity: sha512-ONOEQoKrvXPKk7Su92Co0YMqYO32FfqJTzkKU9u2UpIXyYZIzLSvpdg4AwvSw4mSUW0czu6inK+zby6Oj6gDjQ==
   /array-unique/0.3.2:
     dev: true
     engines:
@@ -1363,6 +1374,14 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-Dj6Wk3tWyTE+Fo1rW8v0Xhwk80um6yFYKbuAxc9c3EZxIHFDYwbi34Uk42u1CdnIiVorvt4RmlSDjIPyzGC2ew==
+  /doctrine/2.1.0:
+    dependencies:
+      esutils: 2.0.3
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==
   /doctrine/3.0.0:
     dependencies:
       esutils: 2.0.3
@@ -1490,6 +1509,36 @@ packages:
       source-map: 0.6.1
     resolution:
       integrity: sha512-TuA+EhsanGcme5T3R0L80u4t8CpbXQjegRmf7+FPTJrtCTErXFeelblRgHQa1FofEzqYYJmJ/OqjTwREp9qgmg==
+  /eslint-plugin-eslint-plugin/2.1.0_eslint@6.7.2:
+    dependencies:
+      eslint: 6.7.2
+    dev: true
+    engines:
+      node: ^6.14.0 || ^8.10.0 || >=9.10.0
+    peerDependencies:
+      eslint: '>=5.0.0'
+    resolution:
+      integrity: sha512-kT3A/ZJftt28gbl/Cv04qezb/NQ1dwYIbi8lyf806XMxkus7DvOVCLIfTXMrorp322Pnoez7+zabXH29tADIDg==
+  /eslint-plugin-react/7.17.0_eslint@6.7.2:
+    dependencies:
+      array-includes: 3.1.0
+      doctrine: 2.1.0
+      eslint: 6.7.2
+      eslint-plugin-eslint-plugin: 2.1.0_eslint@6.7.2
+      has: 1.0.3
+      jsx-ast-utils: 2.2.3
+      object.entries: 1.1.1
+      object.fromentries: 2.0.2
+      object.values: 1.1.1
+      prop-types: 15.7.2
+      resolve: 1.14.1
+    dev: true
+    engines:
+      node: '>=4'
+    peerDependencies:
+      eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
+    resolution:
+      integrity: sha512-ODB7yg6lxhBVMeiH1c7E95FLD4E/TwmFjltiU+ethv7KPdCwgiFuOZg9zNRHyufStTDLl/dEFqI2Q1VPmCd78A==
   /eslint-scope/5.0.0:
     dependencies:
       esrecurse: 4.2.1
@@ -2919,6 +2968,15 @@ packages:
       '0': node >=0.6.0
     resolution:
       integrity: sha1-MT5mvB5cwG5Di8G3SZwuXFastqI=
+  /jsx-ast-utils/2.2.3:
+    dependencies:
+      array-includes: 3.1.0
+      object.assign: 4.1.0
+    dev: true
+    engines:
+      node: '>=4.0'
+    resolution:
+      integrity: sha512-EdIHFMm+1BPynpKOpdPqiOsvnIrInRGJD7bzPZdPkjitQEqpdpUuFpq4T0npZFKTiB3RhWFdGN+oqOJIdhDhQA==
   /kind-of/3.2.2:
     dependencies:
       is-buffer: 1.1.6
@@ -3318,6 +3376,28 @@ packages:
       node: '>= 0.4'
     resolution:
       integrity: sha512-exHJeq6kBKj58mqGyTQ9DFvrZC/eR6OwxzoM9YRoGBqrXYonaFyGiFMuc9VZrXf7DarreEwMpurG3dd+CNyW5w==
+  /object.entries/1.1.1:
+    dependencies:
+      define-properties: 1.1.3
+      es-abstract: 1.17.0-next.1
+      function-bind: 1.1.1
+      has: 1.0.3
+    dev: true
+    engines:
+      node: '>= 0.4'
+    resolution:
+      integrity: sha512-ilqR7BgdyZetJutmDPfXCDffGa0/Yzl2ivVNpbx/g4UeWrCdRnFDUBrKJGLhGieRHDATnyZXWBeCb29k9CJysQ==
+  /object.fromentries/2.0.2:
+    dependencies:
+      define-properties: 1.1.3
+      es-abstract: 1.17.0-next.1
+      function-bind: 1.1.1
+      has: 1.0.3
+    dev: true
+    engines:
+      node: '>= 0.4'
+    resolution:
+      integrity: sha512-r3ZiBH7MQppDJVLx6fhD618GKNG40CZYH9wgwdhKxBDDbQgjeWGGd4AtkZad84d291YxvWe7bJGuE65Anh0dxQ==
   /object.getownpropertydescriptors/2.1.0:
     dependencies:
       define-properties: 1.1.3
@@ -3925,6 +4005,14 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-NfbbPPg/74fT7wk2XYQ7hAIp9zJyZp5Fu19iRbORqqy1BhtrkZ0fPafBU+7bmn8ie69DpT0R6QpJIN2oisYjJg==
+  /prop-types/15.7.2:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      react-is: 16.12.0
+    dev: true
+    resolution:
+      integrity: sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
   /psl/1.6.0:
     dev: true
     resolution:
@@ -5057,6 +5145,7 @@ specifiers:
   cross-env: ^6.0.3
   cssnano: ^4.1.10
   eslint: ^6.7.2
+  eslint-plugin-react: ^7.17.0
   jest: ^24.9.0
   jest-cli: ^24.9.0
   tailwindcss: ^1.1.4
