@@ -1,0 +1,26 @@
+.app-home {
+  @apply p-3;
+}
+
+button {
+  @apply m-2;
+  @apply px-4;
+  @apply py-3;
+  @apply border-none;
+  @apply bg-blue-600;
+  @apply text-white;
+  @apply font-semibold;
+  @apply text-base;
+  @apply uppercase;
+  @apply shadow-lg;
+  @apply outline-none;
+  @apply tracking-wider;
+  @apply cursor-pointer;
+
+  transition: all .15s ease;
+}
+
+button:hover {
+  @apply shadow-xl;
+  transform: translateY(1px);
+}
