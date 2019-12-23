@@ -125,12 +125,12 @@ Add TailwindCSS imports to `global/app.css`.
 @tailwind utilities;
 ```
 
-Install dependencies, initialize `tailwind.config.js`, then serve the app.
+Install dependencies and initialize `tailwind.config.js`, then serve the app.
 
 ```sh
-npm install
-npx tailwind init
-npm run start
+pnpm install
+pnpx tailwind init
+pnpm run serve
 ```
 
 #### ESLint
