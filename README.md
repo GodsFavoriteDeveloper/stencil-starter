@@ -185,9 +185,9 @@ There are several ways to fix this issue. The one employed in this repo is to ad
 }
 ```
 
-Then, depending on your `eslintrc.json` config, you might need to move the the `purgecss` parser function to within `postcss` options, to avoid collisions with the `@stencil/ban-side-effects` rule.
+Then, to avoid collisions with the recommended `@stencil/ban-side-effects` rule, move the `purgecss` options to the body of the `postcss` function in `stencil.config.ts`.
 
-```js
+```ts
 export const config: Config = {
   plugins: [
     postcss({
