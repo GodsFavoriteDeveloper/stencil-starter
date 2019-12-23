@@ -119,7 +119,7 @@ export const config: Config = {
 };
 ```
 
-Add TailwindCSS imports to `global/app.css`.
+Add Tailwind imports to `global/app.css`.
 
 ```css
 @tailwind base;
