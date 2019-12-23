@@ -2,7 +2,9 @@
 
 A minimal starter app combining [Stencil](https://stenciljs.com/) and [TailwindCSS](https://tailwindcss.com/), based on the [Getting Started](https://stenciljs.com/docs/getting-started) minimal starter app. [ESLint](https://eslint.org/) configuration is also included, with additional support for the [VSCode](https://github.com/microsoft/vscode-eslint) extension.
 
-## Stencil
+## Framework Overview
+
+### Stencil
 
 [Stencil](https://stenciljs.com/) is a toolchain for building reusable, scalable Design Systems, to generate small, blazing fast, and 100% standards based Web Components that run in every browser.
 
@@ -12,7 +14,7 @@ Stencil components are just Web Components, so they work in any major framework 
 
 Stencil also enables a number of key capabilities on top of Web Components, in particular Server Side Rendering (SSR) without the need to run a headless browser, pre-rendering, and objects-as-properties (instead of just strings).
 
-## TailwindCSS
+### TailwindCSS
 
 [TailwindCSS](https://tailwindcss.com/) is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.
 
