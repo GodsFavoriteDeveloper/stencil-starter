@@ -52,7 +52,7 @@ pnpm run test:watch # run tests and watch for changes
 
 This repository was created following the excellent [Stencil example](https://github.com/jagreehal/setup-examples/tree/master/examples/stencil) provided by [Jag Reehal](https://github.com/jagreehal). His instructions were adapted to a new Stencil app generated using [pnpm](https://pnpm.js.org/).
 
-#### Stencil + TailwindCSS
+#### Stencil + Tailwind
 
 Follow the [Getting Started](https://stenciljs.com/docs/getting-started) guide, selecting a minimal starter app.
 
