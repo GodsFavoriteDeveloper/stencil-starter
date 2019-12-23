@@ -31,7 +31,7 @@ Below there are detailed instructions on how to start using this repository for 
 #### Clone and Setup
 
 ```sh
-git clone git@github.com:davvelsan/stencil-tailwind-starter.git
+git clone git@github.com:davelsan/stencil-tailwind-starter.git
 pnpm install
 ```
 
