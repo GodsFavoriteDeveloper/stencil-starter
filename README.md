@@ -1,4 +1,4 @@
-# Stencil + TailwindCSS Starter
+# Stencil + Tailwind Starter
 
 A minimal starter app combining [Stencil](https://stenciljs.com/) and [Tailwind CSS](https://tailwindcss.com/), based on the [Getting Started](https://stenciljs.com/docs/getting-started) minimal starter app. [ESLint](https://eslint.org/) configuration is also included, with additional support for the [VSCode](https://github.com/microsoft/vscode-eslint) extension.
 
