@@ -1,6 +1,6 @@
 # Stencil + TailwindCSS Starter
 
-A minimal starter app combining [Stencil](https://stenciljs.com/) and [TailwindCSS](https://tailwindcss.com/), based on the [Getting Started](https://stenciljs.com/docs/getting-started) minimal starter app. [ESLint](https://eslint.org/) configuration is also included, with additional support for the [VSCode](https://github.com/microsoft/vscode-eslint) extension.
+A minimal starter app combining [Stencil](https://stenciljs.com/) and [Tailwind CSS](https://tailwindcss.com/), based on the [Getting Started](https://stenciljs.com/docs/getting-started) minimal starter app. [ESLint](https://eslint.org/) configuration is also included, with additional support for the [VSCode](https://github.com/microsoft/vscode-eslint) extension.
 
 ## Framework Overview
 
@@ -14,9 +14,9 @@ Stencil components are just Web Components, so they work in any major framework 
 
 Stencil also enables a number of key capabilities on top of Web Components, in particular Server Side Rendering (SSR) without the need to run a headless browser, pre-rendering, and objects-as-properties (instead of just strings).
 
-### TailwindCSS
+### Tailwind CSS
 
-[TailwindCSS](https://tailwindcss.com/) is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.
+[Tailwind](https://tailwindcss.com/) is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.
 
 Most CSS frameworks come with all sorts of predesigned components like buttons, cards, and alerts that might help you move quickly at first, but cause more pain than they cure when it comes time to make your site stand out with a custom design.
 
@@ -24,11 +24,11 @@ Tailwind is different. Instead of opinionated predesigned components, Tailwind p
 
 ## Develop
 
-This starter repository comes preloaded with all the necessary config, files and packages to benefit from [ESLint](https://eslint.org/docs/user-guide/configuring), [Jest](https://jestjs.io/docs/en/configuration) and [TailwindCSS](https://tailwindcss.com/docs/configuration) frameworks right from the start. For additional configuration options, check the provided links.
+This starter repository comes preloaded with all the necessary packages to benefit from [ESLint](https://eslint.org/docs/user-guide/configuring), [Jest](https://jestjs.io/docs/en/configuration) and [Tailwind](https://tailwindcss.com/docs/configuration) frameworks right from the start. For additional configuration options, check the provided links.
 
 Below there are detailed instructions on how to start using this repository for development and how to create it from scratch.
 
-### Usage
+### Use For Development
 
 #### Clone and Setup
 
@@ -48,7 +48,7 @@ pnpm run test       # run tests
 pnpm run test:watch # run tests and watch for changes
 ```
 
-### Create from scratch
+### Create From Scratch
 
 This repository was created following the excellent [Stencil example](https://github.com/jagreehal/setup-examples/tree/master/examples/stencil) provided by [Jag Reehal](https://github.com/jagreehal). His instructions were adapted to a new Stencil app generated using [pnpm](https://pnpm.js.org/).
 
