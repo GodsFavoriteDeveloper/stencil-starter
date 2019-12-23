@@ -167,15 +167,9 @@ Using pnpm, it is possible that `eslint-plugin-react` is detected as a missing d
 pnpm add -D eslint-plugin-react
 ```
 
-When using the [ESLint extension for Visual Studio Code](https://github.com/microsoft/vscode-eslint), the typescript parser might complain about `stencil.config.ts` not being included in your project files. This happens because `tsconfig.json` has been referenced as a project in `.eslintrc.json`, and the stencil config file is not included there.
+When using the [ESLint extension for Visual Studio Code](https://github.com/microsoft/vscode-eslint), the typescript parser might complain about `stencil.config.ts` not being included in your project files. This happens because `tsconfig.json` has been referenced as a project in `.eslintrc.json`, and the stencil config file is not included there. For more information, see typescript-eslint issues [#890](https://github.com/typescript-eslint/typescript-eslint/issues/890) and [#967](https://github.com/typescript-eslint/typescript-eslint/issues/967).
 
-For more information, see the following issues:
-
-https://github.com/typescript-eslint/typescript-eslint/issues/967
-
-https://github.com/typescript-eslint/typescript-eslint/issues/890
-
-There are several ways to fix this issue. The one employed in this repo is to add any root `*.ts` files to `tsconfig.json`.
+There are several ways to fix this. The one employed in this repo is to add any root `*.ts` files to `tsconfig.json`.
 
 ```json
 {
