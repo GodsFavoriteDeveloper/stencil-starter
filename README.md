@@ -161,7 +161,7 @@ Create an `.eslintrc.json` file at the project root.
 
 ### ESLint
 
-Using pnpm, it is possible that `eslint-plugin-react` is detected as a missing dependency. To fix this, install the plugin.
+Using pnpm, it is possible that `eslint-plugin-react` is detected as a missing dependency. To fix this, install the package.
 
 ```sh
 pnpm add -D eslint-plugin-react
