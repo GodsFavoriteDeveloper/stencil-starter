@@ -2,26 +2,6 @@
 
 A minimal starter app combining [Stencil](https://stenciljs.com/) and [Tailwind CSS](https://tailwindcss.com/), based on the [Getting Started](https://stenciljs.com/docs/getting-started) minimal starter app. [ESLint](https://eslint.org/) configuration is also included, with additional support for the [VSCode](https://github.com/microsoft/vscode-eslint) extension.
 
-## Framework Overview
-
-### Stencil
-
-[Stencil](https://stenciljs.com/) is a toolchain for building reusable, scalable Design Systems, to generate small, blazing fast, and 100% standards based Web Components that run in every browser.
-
-Stencil combines the best concepts of the most popular frontend frameworks into a compile-time rather than run-time tool.  Stencil takes TypeScript, JSX, a tiny virtual DOM layer, efficient one-way data binding, an asynchronous rendering pipeline (similar to React Fiber), and lazy-loading out of the box, and generates 100% standards-based Web Components that run in any browser supporting the Custom Elements v1 spec.
-
-Stencil components are just Web Components, so they work in any major framework or with no framework at all. In many cases, Stencil can be used as a drop in replacement for traditional frontend frameworks given the capabilities now available in the browser, though using it as such is certainly not required.
-
-Stencil also enables a number of key capabilities on top of Web Components, in particular Server Side Rendering (SSR) without the need to run a headless browser, pre-rendering, and objects-as-properties (instead of just strings).
-
-### Tailwind CSS
-
-[Tailwind](https://tailwindcss.com/) is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.
-
-Most CSS frameworks come with all sorts of predesigned components like buttons, cards, and alerts that might help you move quickly at first, but cause more pain than they cure when it comes time to make your site stand out with a custom design.
-
-Tailwind is different. Instead of opinionated predesigned components, Tailwind provides low-level utility classes that let you build completely custom designs without ever leaving your HTML.
-
 ## Develop
 
 This starter repository comes preloaded with all the necessary packages to benefit from [ESLint](https://eslint.org/docs/user-guide/configuring), [Jest](https://jestjs.io/docs/en/configuration) and [Tailwind](https://tailwindcss.com/docs/configuration) frameworks right from the start. For additional configuration options, check the provided links.
