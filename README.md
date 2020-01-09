@@ -119,7 +119,7 @@ pnpm run serve
 
 Follow the [@stencil/eslint-plugin](https://github.com/ionic-team/stencil-eslint) instructions on how to add ESLint to a Stencil project (summarized below).
 
-Install eslint, the  and its dependencies.
+Install eslint and the necessary typescript dependencies.
 
 ```sh
 pnpm add -D eslint @typescript-eslint/parser @stencil/eslint-plugin
@@ -161,7 +161,7 @@ There are several ways to fix this. The one employed in this repo is to add any 
 }
 ```
 
-Then, to avoid collisions with the recommended `@stencil/ban-side-effects` rule, move the `purgecss` options to the body of the `postcss` function in `stencil.config.ts`.
+To avoid collisions with the recommended `@stencil/ban-side-effects` rule, move the `purgecss` options to the body of the `postcss` function in `stencil.config.ts`.
 
 ```ts
 export const config: Config = {
