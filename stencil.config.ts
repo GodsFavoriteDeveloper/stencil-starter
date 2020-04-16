@@ -35,6 +35,7 @@ export const config: Config = {
     })
   ],
   testing: {
+    collectCoverage: true,
     browserArgs: ['--no-sandbox', '--disable-setuid-sandbox'],
   }
 };
