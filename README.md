@@ -1,187 +1,35 @@
-# Stencil + Tailwind Starter
+<h1 align=center>Stencil + Tailwind Starter</h1>
 
-A minimal starter app combining [Stencil](https://stenciljs.com/) and [Tailwind CSS](https://tailwindcss.com/), based on the [Getting Started](https://stenciljs.com/docs/getting-started) minimal starter app. [ESLint](https://eslint.org/) configuration is also included, with additional support for the [VSCode](https://github.com/microsoft/vscode-eslint) extension.
+A minimal starter app, based on the [Getting Started](https://stenciljs.com/docs/getting-started) guide, combining [Stencil](https://stenciljs.com/) and [Tailwind CSS](https://tailwindcss.com/). The repository was created following the excellent [Stencil example](https://github.com/jagreehal/setup-examples/tree/updated-stencil-1.12.3) provided by [Jag Reehal](https://github.com/jagreehal).
+
+## Configuration
+
+### Tailwind CSS
+
+The original components have been modified to leverage [Tailwind CSS]() utility classes, applied in the corresponding component `*.css` file. To use inline classes in the `*.html`, the `shadow` option must be set to `false`.
+
+### ESLint
+
+Linting is configured to use the additional rules from [@stencil/eslint-plugin](https://github.com/ionic-team/stencil-eslint). Because this package seems to be based on [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react), a react version setting has been provided in `.eslintrc.json` to avoid any warnings.
+
 
 ## Develop
-
-This starter repository comes preloaded with all the necessary packages to benefit from [ESLint](https://eslint.org/docs/user-guide/configuring), [Jest](https://jestjs.io/docs/en/configuration) and [Tailwind](https://tailwindcss.com/docs/configuration) frameworks right from the start. For additional configuration options, check the provided links.
-
-Below there are detailed instructions on how to start using this repository for development and how to create it from scratch.
-
-### Use For Development
 
 #### Clone and Setup
 
 ```sh
 git clone git@github.com:davelsan/stencil-tailwind-starter.git
-pnpm install
+npm install
 ```
 
 #### Command Cheatsheet
 
 ```sh
-pnpm run build      # build for deployment
-pnpm run generate   # generate new component
-pnpm run lint       # lint and fix code
-pnpm run serve      # build and serve for development
-pnpm run test       # run tests
-pnpm run test:watch # run tests and watch for changes
-```
-
-### Create From Scratch
-
-This repository was created following the excellent [Stencil example](https://github.com/jagreehal/setup-examples/tree/master/examples/stencil) provided by [Jag Reehal](https://github.com/jagreehal). His instructions were adapted to a new Stencil app generated using [pnpm](https://pnpm.js.org/).
-
-#### Stencil + Tailwind
-
-Follow the [Getting Started](https://stenciljs.com/docs/getting-started) guide, selecting a minimal starter app.
-
-```sh
-npm init stencil
-> app
-```
-
-Update `build` script and add `devDependencies` to `package.json`.
-
-```json
-{
-  "scripts": {
-    "build": "cross-env NODE_ENV=production stencil build",
-  },
-  "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^1.3.0",
-    "@stencil/postcss": "^1.0.1",
-    "@types/autoprefixer": "^9.6.1",
-    "@types/node": "^12.12.21",
-    "autoprefixer": "^9.7.3",
-    "cross-env": "^6.0.3",
-    "cssnano": "^4.1.10",
-    "serve": "^11.2.0",
-    "tailwindcss": "^1.1.4"
-  }
-}
-```
-
-Update `stencil.config.ts` with `postcss` plugins and config.
-
-```ts
-import { Config }   from '@stencil/core';
-import { postcss }  from "@stencil/postcss";
-import autoprefixer from "autoprefixer";
-import tailwindcss  from "tailwindcss";
-import purgecss     from "@fullhuman/postcss-purgecss";
-import cssnano      from "cssnano";
-
-const purge = purgecss({
-  content: ["./src/**/*.tsx", "./src/index.html"],
-  defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
-});
-
-export const config: Config = {
-  globalStyle: 'src/global/app.css',
-  globalScript: 'src/global/app.ts',
-  outputTargets: [
-    {
-      type: 'www',
-      serviceWorker: null,
-      baseUrl: 'http://localhost:5000'
-    }
-  ],
-  plugins: [
-    postcss({
-      plugins: [
-        tailwindcss('./tailwind.config.js'),
-        autoprefixer(),
-        ...( process.env.NODE_ENV === "production" ? [ purge, cssnano() ] : [] )
-      ]
-    })
-  ]
-};
-```
-
-Add Tailwind imports to `global/app.css`.
-
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
-Install dependencies and initialize `tailwind.config.js`, then serve the app.
-
-```sh
-pnpm install
-pnpx tailwind init
-pnpm run serve
-```
-
-#### ESLint
-
-Follow the [@stencil/eslint-plugin](https://github.com/ionic-team/stencil-eslint) instructions on how to add ESLint to a Stencil project (summarized below).
-
-Install eslint and the necessary typescript dependencies.
-
-```sh
-pnpm add -D eslint @typescript-eslint/parser @stencil/eslint-plugin
-```
-
-Create an `.eslintrc.json` file at the project root.
-
-```json
-{
-  "root": true,
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  },
-  "extends": [
-    "plugin:@stencil/recommended"
-  ]
-}
-```
-
-## Troubleshooting
-
-### ESLint
-
-Using pnpm, it is possible that `eslint-plugin-react` is detected as a missing dependency. To fix this, install the package.
-
-```sh
-pnpm add -D eslint-plugin-react
-```
-
-When using the [ESLint extension for Visual Studio Code](https://github.com/microsoft/vscode-eslint), the typescript parser might complain about `stencil.config.ts` not being included in your project files. This happens because `tsconfig.json` has been referenced as a project in `.eslintrc.json`, and the stencil config file is not included there. For more information, see typescript-eslint issues [#890](https://github.com/typescript-eslint/typescript-eslint/issues/890) and [#967](https://github.com/typescript-eslint/typescript-eslint/issues/967).
-
-There are several ways to fix this. The one employed in this repo is to add any root `*.ts` files to `tsconfig.json`.
-
-```json
-{
-  "include": [
-    "./*.ts"
-  ],
-}
-```
-
-To avoid collisions with the recommended `@stencil/ban-side-effects` rule, move the `purgecss` options to the body of the `postcss` function in `stencil.config.ts`.
-
-```ts
-export const config: Config = {
-  plugins: [
-    postcss({
-      plugins: [
-        tailwindcss('./tailwind.config.js'),
-        autoprefixer(),
-        ...(process.env.NODE_ENV === 'production'
-          ? [
-            purgecss({
-              content: ['./src/**/*.tsx', './src/index.html'],
-              defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
-            }),
-            cssnano()
-          ]
-          : []
-        )
-      ]
-    })
-  ]
-};
+npm run build      # build for deployment
+npm run generate   # generate new component
+npm run lint       # lint and fix code
+npm run serve      # build and serve for development
+npm run test:unit  # run unit tests
+npm run test:watch # run unit tests and watch for changes
+npm run test:e2e   # run end-to-end tests
 ```
