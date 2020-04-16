@@ -7,6 +7,7 @@ import { MatchResults } from '@stencil/router';
   shadow: true
 })
 export class AppProfile {
+
   @Prop() match: MatchResults;
 
   private normalize(name: string): string {

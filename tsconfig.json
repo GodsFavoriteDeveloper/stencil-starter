@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
+
+    /* COMPILER */
+    "alwaysStrict": true,
     "allowUnreachableCode": false,
     "declaration": false,
     "experimentalDecorators": true,
@@ -8,18 +10,29 @@
       "dom",
       "es2015"
     ],
+
+    /* MODULES */
+    "baseUrl": ".",
     "moduleResolution": "node",
-    "module": "esnext",
+    "module": "ESNext",
     "target": "es2017",
+    "allowSyntheticDefaultImports": true,
+
+    /* TYPE CHECKING */
+    "strict": true,
+    "strictPropertyInitialization": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "checkJs": false,
     "jsx": "react",
-    "jsxFactory": "h"
+    "jsxFactory": "h",
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "./*.ts"
+    "./stencil.config.ts",
+    "src"
   ],
   "exclude": [
     "node_modules",

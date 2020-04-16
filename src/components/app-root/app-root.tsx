@@ -4,21 +4,18 @@ import { Component, h } from '@stencil/core';
 @Component({
   tag: 'app-root',
   styleUrl: 'app-root.css',
-  shadow: false
+  shadow: true
 })
 export class AppRoot {
 
   render() {
     return (
       <div>
-        <header class="flex items-center bg-blue-600 text-white shadow-xl">
+        <header>
           <stencil-route-link url="/">
-            <img
-              class="ml-4 w-10"
-              src="../../assets/icon/icon.png"
-            />
+            <img class="flex items-center" src="../../assets/icon/icon.png" />
           </stencil-route-link>
-          <h1 class="p-4 font-medium text-2xl">
+          <h1>
             Stencil + Tailwind Starter
           </h1>
         </header>

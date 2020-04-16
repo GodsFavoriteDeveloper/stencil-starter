@@ -6,6 +6,10 @@ import purgecss     from '@fullhuman/postcss-purgecss';
 import cssnano      from 'cssnano';
 
 // https://stenciljs.com/docs/config
+const purge = purgecss({
+  content: ['./src/**/*.tsx', './src/index.html'],
+  defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+});
 
 export const config: Config = {
   globalStyle: 'src/global/app.css',
@@ -24,16 +28,13 @@ export const config: Config = {
         tailwindcss('./tailwind.config.js'),
         autoprefixer(),
         ...(process.env.NODE_ENV === 'production'
-          ? [
-            purgecss({
-              content: ['./src/**/*.tsx', './src/index.html'],
-              defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
-            }),
-            cssnano()
-          ]
+          ? [ purge, cssnano() ]
           : []
         )
       ]
     })
-  ]
+  ],
+  testing: {
+    browserArgs: ['--no-sandbox', '--disable-setuid-sandbox'],
+  }
 };

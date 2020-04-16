@@ -14,7 +14,7 @@ describe('app-profile', () => {
 
     const profileElement = await page.find('app-root >>> app-profile');
     const element = profileElement.shadowRoot.querySelector('div');
-    expect(element.textContent).toContain('Hello! My name is Joseph.');
+    expect(element?.textContent).toContain('Hello! My name is Joseph.');
   });
 
   // it('includes a div with the class "app-profile"', async () => {
