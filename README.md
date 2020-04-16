@@ -1,5 +1,17 @@
 <h1 align=center>Stencil + Tailwind Starter</h1>
 
+<p align="center">
+    <a href="https://actions-badge.atrox.dev/davelsan/stencil-tailwind-starter/goto?ref=master">
+      <img alt="Build Status" src="https://github.com/davelsan/stencil-tailwind-starter/workflows/build/badge.svg"/>
+    </a>
+    <a href="https://codecov.io/gh/davelsan/stencil-tailwind-starter">
+      <img src="https://codecov.io/gh/davelsan/stencil-tailwind-starter/branch/master/graph/badge.svg" />
+    </a>
+    <a href="https://github.com/davelsan/stencil-tailwind-starter/blob/master/LICENSE">
+      <img alt="License" src="https://img.shields.io/github/license/davelsan/stencil-tailwind-starter"/>
+    </a>
+</p>
+
 A minimal starter app, based on the [Getting Started](https://stenciljs.com/docs/getting-started) guide, combining [Stencil](https://stenciljs.com/) and [Tailwind CSS](https://tailwindcss.com/). The repository was created following the excellent [Stencil example](https://github.com/jagreehal/setup-examples/tree/updated-stencil-1.12.3) provided by [Jag Reehal](https://github.com/jagreehal).
 
 ## Configuration
